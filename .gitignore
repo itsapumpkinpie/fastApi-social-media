@@ -1,6 +1,4 @@
 __pycache__
 .idea
-app.egg-info/PKG-INFO
-app.egg-info/SOURCES.txt
-app.egg-info/dependency_links.txt
-app.egg-info/top_level.txt
+.env
+

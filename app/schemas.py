@@ -13,14 +13,6 @@ class PostCreate(PostBase):
     pass
 
 
-class PostResponse(BaseModel):
-    title: str
-    content: str
-    published: bool
-    created_at: datetime
-
-    class Config:
-        orm_mode = True
 
 
 class User(BaseModel):
@@ -36,6 +28,14 @@ class SignUpResponse(BaseModel):
     class Config:
         orm_mode = True
 
+class Post(PostBase):
+    id: int
+    created_at: datetime
+    user_id: int
+    user: SignUpResponse
+
+    class Config:
+        orm_mode = True
 
 class UserLogin(BaseModel):
     email: EmailStr

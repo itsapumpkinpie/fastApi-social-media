@@ -3,6 +3,7 @@ import uvicorn
 from app.db import models
 from app.db.сonnection import engine
 from app.routers import post, user, auth
+from app.config import settings
 
 
 models.Base.metadata.create_all(bind=engine)
